@@ -1,0 +1,82 @@
+/* styles/pdfViewerOverride.css */
+
+/* Ensure the main viewer takes full width and height */
+.rpv-core__viewer {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    box-sizing: border-box;
+  }
+  
+  /* Remove padding and margin from each PDF page layer */
+  .rpv-core__page-layer,
+  .rpv-core__inner-page,
+  .rpv-core__canvas,
+  .rpv-core__page {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Make the canvas fill the page container */
+  .rpv-core__canvas {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .custom-pdf-viewer .rpv-core__viewer {
+    border: none !important;
+  }
+  
+  .custom-pdf-viewer .rpv-core__viewer-zone {
+    border: none !important;
+  }
+  
+  /* Remove any extra spacing around the pages */
+  .rpv-core__page {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Optional: Remove toolbar margins if present */
+  .rpv-toolbar {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Ensure no overflow from viewer */
+  .rpv-core__viewer-wrapper {
+    overflow: hidden !important;
+  }
+  
+  /* Adjust background colors for page layers */
+  .rpv-core__page-layer canvas {
+    background-color: transparent !important;
+  }
+
+  .rpv-core__page {
+    background-color: transparent !important;
+  }
+
+.pdf-viewer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.pdf-container {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.pdf-viewer {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+/* Add this at the end of the file */
+.rpv-core__viewer {
+  height: 100% !important;
+}

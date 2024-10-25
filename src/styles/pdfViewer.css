@@ -1,0 +1,49 @@
+/* Remove all backgrounds, borders, and shadows */
+.rpv-core__viewer,
+.rpv-core__inner-page,
+.rpv-core__inner-pages-container,
+.rpv-core__page-layer,
+.rpv-core__canvas-layer,
+.rpv-core__text-layer,
+.rpv-core__annotation-layer,
+.rpv-core__page,
+.rpv-core__page-inner-container,
+.rpv-core__canvas-layer canvas {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure toolbar is visible */
+.rpv-toolbar {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 8px;
+}
+
+/* Adjust viewer position */
+.rpv-core__viewer {
+  position: absolute;
+  top: 40px; /* Adjust based on your toolbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* Remove any padding or margin that might cause white space */
+.rpv-core__inner-pages {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Ensure the pages are centered */
+.rpv-core__inner-pages-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Make sure the actual PDF content is visible */
+.rpv-core__canvas-layer canvas {
+  opacity: 1 !important;
+}
